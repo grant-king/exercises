@@ -48,7 +48,7 @@ def generate_wordlist():
 
 #create an n-member list consisting of lists nn-members long of random strings,
 #28 characters each as specified by generate_string()
-nn = 1000
+nn = 100000
 n = 10
 monkey_strings = [[generate_string(20) for i in range(nn)] for i in range(n)]
 
@@ -63,8 +63,7 @@ from gtts import gTTS
 
 long_string = ''
 for string_list in monkey_strings:
-    print(find_words(string_list, 3))
-    for each_word in find_words(string_list, 3):
+    for each_word in find_words(string_list, 5):
         long_string = long_string + each_word + " "
 
 print(long_string)
